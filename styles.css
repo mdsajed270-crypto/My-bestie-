@@ -1,0 +1,325 @@
+/* =========================
+   BEST FRIENDS DAY WEBSITE
+   STYLE.CSS (FINAL)
+   Purple + Pink Glass Theme
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1a0025, #2a0040, #3a005a);
+    color: #fff;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* =========================
+   EMOJI RAIN BACKGROUND
+========================= */
+
+#emojiRain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.fallingEmoji {
+    position: absolute;
+    top: -50px;
+    font-size: 20px;
+    opacity: 0.8;
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-10vh) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    background: linear-gradient(90deg, #ff4ecd, #8a2be2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fadeDown 1s ease;
+}
+
+.hero-content h2 {
+    margin-top: 10px;
+    font-size: 1.8rem;
+}
+
+.subtitle {
+    margin-top: 15px;
+    opacity: 0.8;
+}
+
+/* Button */
+
+#startBtn {
+    margin-top: 25px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    background: linear-gradient(90deg, #ff4ecd, #8a2be2);
+    color: white;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+#startBtn:hover {
+    transform: scale(1.05);
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section {
+    padding: 80px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.section h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    color: #ffb3ff;
+}
+
+/* =========================
+   TIMELINE
+========================= */
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.event {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.event:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.12);
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    padding: 20px;
+    border-radius: 15px;
+    transition: 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* =========================
+   LISTS
+========================= */
+
+.nice-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.nice-list li {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 12px;
+    border-radius: 12px;
+    border-left: 4px solid #ff4ecd;
+}
+
+/* =========================
+   INSIDE JOKES
+========================= */
+
+.jokeBtn {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #ff4ecd, #8a2be2);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.jokeBtn:hover {
+    transform: scale(1.02);
+}
+
+.joke {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: none;
+}
+
+/* =========================
+   QUIZ
+========================= */
+
+.quiz {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(12px);
+}
+
+.answer {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    cursor: pointer;
+}
+
+.answer:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* =========================
+   MEMORY HUNT
+========================= */
+
+.hunt {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 2rem;
+    margin-top: 20px;
+}
+
+.huntItem {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.huntItem:hover {
+    transform: scale(1.3);
+}
+
+/* =========================
+   LETTER
+========================= */
+
+.letter {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 20px;
+    border-radius: 15px;
+    line-height: 1.6;
+}
+
+/* =========================
+   ENDING
+========================= */
+
+.ending {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.ending h1 {
+    font-size: 2.5rem;
+    color: #ff4ecd;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .section h2 {
+        font-size: 1.6rem;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .hunt {
+        flex-wrap: wrap;
+    }
+}
